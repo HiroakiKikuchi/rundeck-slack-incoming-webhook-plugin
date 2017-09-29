@@ -208,8 +208,8 @@ public class SlackNotificationPlugin implements NotificationPlugin {
     private void putRequestStream(HttpURLConnection connection, String message) {
         try {
             connection.setRequestMethod("POST");
-            connection.setRequestProperty("Content-Type", "application/json");
-            connection.setRequestProperty("charset", "utf-8");
+            connection.addRequestProperty("Content-Type", "application/json");
+            connection.addRequestProperty("charset", "utf-8");
 
             connection.setDoInput(true);
             connection.setDoOutput(true);
